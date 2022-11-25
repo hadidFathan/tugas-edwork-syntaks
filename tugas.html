@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>JS variable</title>
+</head>
+<body>
+   <h3>JS variable1</h3> 
+   <p id="number"></p>
+
+   <br>
+
+   <h3>JS variable 2</h3> 
+   <p id="string"></p>
+
+   <br>
+
+   <h3>JS variable 3</h3>
+   <p>jumlahkan antara variable pertama dan kedua :</p> 
+   <p id="aritmatik"></p>
+
+   <br>
+
+   <script>
+    /*untuk mensummon value 10*/
+    document.getElementById('number').innerHTML = 10;
+    /*untuk mensummon text ssaya belajar javascript*/
+    document.getElementById('string').innerHTML = "saya belajar javascript";
+
+    let x,y;
+    /*x adalah angka dari variable 1*/
+    x = 10;
+    /*Jika variable y atau harusnya variable 2 itu "saya belajar javascript"maka akan keluar hasil (NaN) Jadi kita coba ganti variable 2 dengan 6*/
+    y = '6';
+    /*kita akan mencomba menjumlahkan dengna cara mengkalikan x * y = dan berapa hasilnya*/
+    document.getElementById('aritmatik').innerHTML = (x * y);
+   </script>
+</body>
+</html>
