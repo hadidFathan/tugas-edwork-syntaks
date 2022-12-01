@@ -14,23 +14,27 @@ describe('Working with input', () => {
         cy.get('#password').type('password')
        });
     it('Should Try to login', () =>{
-    cy.fixture('saucedemo').then(user => {
-        const username = user.username
-        const password = user.password
-
-        cy.get('#user-name').clear()
-        cy.get('#user-name').type(username)
-        cy.get('#password').clear()
-        cy.get('#password').type(password) 
-        cy.contains('Login').click()
-        //cy.get('.error').should('contain.text', 'Epic sadface: Sorry, this user has been locked out.')
-    })
+   cy.logins()
    });
+    
    it('Should fill add chart', () =>{
     cy.get('#add-to-cart-sauce-labs-backpack').click()
     cy.get('#add-to-cart-sauce-labs-bike-light').click()
     cy.get('#add-to-cart-sauce-labs-bolt-t-shirt').click()
-    
+    cy.get('#shopping_cart_container').click()
    });
+   it('Should Try to cart and input check out, And Finish', () =>{
+    cy.logins()
+    cy.get('#add-to-cart-sauce-labs-backpack').click()
+    cy.get('#add-to-cart-sauce-labs-bike-light').click()
+    cy.get('#add-to-cart-sauce-labs-bolt-t-shirt').click()
+    cy.get('#shopping_cart_container').click()
+    cy.get('#checkout').click()
+    cy.get('#first-name').type('Ralph').should('have.value', 'Ralph')
+    cy.get('#last-name').type('ruhia').should('have.value', 'ruhia')
+    cy.get('#postal-code').type('8979').should('have.value', '8979')
+    cy.get('#continue').click()
+    cy.get('#finish').click()
+    });
    
    });
