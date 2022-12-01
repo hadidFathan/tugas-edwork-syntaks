@@ -26,8 +26,8 @@ describe('Working with input', () => {
     cy.login()
     cy.visit('http://zero.webappsecurity.com/bank/pay-bills.html')
     cy.get('#sp_amount').type('15000').should('have.value', '15000')
-
     cy.get('#sp_description').type('Liburan akhir taun').should('have.value', 'Liburan akhir taun')
+    cy.get('[type="submit"]').click()
    });
   
    
