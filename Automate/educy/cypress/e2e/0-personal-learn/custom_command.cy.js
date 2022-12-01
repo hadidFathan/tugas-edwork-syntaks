@@ -25,7 +25,11 @@ describe('Working with input', () => {
     cy.get('#pay_bills_tab').click()
     cy.login()
     cy.visit('http://zero.webappsecurity.com/bank/pay-bills.html')
+    cy.get('#sp_payee').select('apple')
+    cy.get('#sp_account').select('2')
+
     cy.get('#sp_amount').type('15000').should('have.value', '15000')
+    cy.get('#sp_date').type('<input type="date"> 1999-12-31').type('{enter}')
     cy.get('#sp_description').type('Liburan akhir taun').should('have.value', 'Liburan akhir taun')
     cy.get('[type="submit"]').click()
    });
