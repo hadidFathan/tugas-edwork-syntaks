@@ -26,8 +26,6 @@
 
 
 Cypress.Commands.add('login', (username, password) => {
-    cy.clearCookies()
-    cy.clearLocalStorage()
     cy.fixture('user').then(user => {
         const username = user.username
         const password = user.password
