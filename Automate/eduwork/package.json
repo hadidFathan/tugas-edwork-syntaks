@@ -1,0 +1,15 @@
+{
+  "name": "edwork",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "oimtrust",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^11.2.0",
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  }
+}
