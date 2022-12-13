@@ -1,0 +1,20 @@
+{
+  "name": "testedu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "author": "oimtrust",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.5.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "prettier": "^2.8.1"
+  },
+  "cypress-cucumber-preprocessor": {
+  "nonGlobalStepDefinitions": true
+}
+
+}

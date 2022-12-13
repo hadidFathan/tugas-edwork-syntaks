@@ -5,11 +5,16 @@
   "author": "oimtrust",
   "license": "MIT",
   "devDependencies": {
+    "@cucumber/cucumber": "^8.9.0",
     "cypress": "^11.2.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "prettier": "^2.8.0"
   },
   "dependencies": {
     "cucumber": "^6.0.7"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
+  
 }

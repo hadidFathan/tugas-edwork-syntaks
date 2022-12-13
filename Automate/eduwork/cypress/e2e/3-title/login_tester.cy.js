@@ -28,7 +28,6 @@ describe('Login/Logout  Test', () => {
     })
     it('Should logout from the application', () => {
         cy.logout()
-        cy.wait(5000)
-        
+        cy.wait(5000)     
     })
     })
